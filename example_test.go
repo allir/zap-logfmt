@@ -8,7 +8,7 @@ import (
 	"go.uber.org/zap/zapcore"
 )
 
-func Example_usage() {
+func Example_newEncoder() {
 	config := zap.NewProductionEncoderConfig()
 	config.TimeKey = ""
 	logger := zap.New(
@@ -26,7 +26,7 @@ func Example_usage() {
 	// Output: level=info logger=main caller=zap-logfmt/example_test.go:24 msg="Hello World"
 }
 
-func Example_usage_register() {
+func Example_register() {
 	zaplogfmt.Register()
 	zapConfig := zap.NewProductionConfig()
 	zapConfig.Encoding = "logfmt"
@@ -47,4 +47,19 @@ func Example_usage_register() {
 	logger.Info("Hello World")
 
 	// Output: level=info logger=reg caller=zap-logfmt/example_test.go:47 msg="Hello World"
+}
+
+func Example_array() {
+	config := zap.NewProductionEncoderConfig()
+	config.TimeKey = ""
+
+	logger := zap.New(zapcore.NewCore(
+		zaplogfmt.NewEncoder(config),
+		os.Stdout,
+		zapcore.DebugLevel,
+	))
+
+	logger.Info("counting", zap.Ints("values", []int{0, 1, 2, 3}))
+
+	// Output: level=info msg=counting values=[0,1,2,3]
 }
