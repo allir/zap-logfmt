@@ -2,7 +2,7 @@
 
 This package provides a logfmt encoder for [zap][zap].
 
-[![GoDoc](https://godoc.org/github.com/sykesm/zap-logfmt?status.svg)](https://godoc.org/github.com/sykesm/zap-logfmt)
+[![GoDoc](https://godoc.org/github.com/allir/zap-logfmt?status.svg)](https://godoc.org/github.com/allir/zap-logfmt)
 
 ## Usage
 
@@ -14,7 +14,7 @@ package main
 import (
     "os"
 
-    "github.com/sykesm/zap-logfmt"
+    "github.com/allir/zap-logfmt"
     "go.uber.org/zap"
     "go.uber.org/zap/zapcore"
 )
