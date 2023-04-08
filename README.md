@@ -1,8 +1,8 @@
 # Logfmt Encoder
 
-This package provides a logfmt encoder for [zap][zap].
-
 [![GoDoc](https://godoc.org/github.com/allir/zap-logfmt?status.svg)](https://godoc.org/github.com/allir/zap-logfmt)
+
+This package provides a logfmt encoder for [zap][zap].
 
 ## Usage
 
