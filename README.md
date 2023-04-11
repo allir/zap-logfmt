@@ -1,6 +1,7 @@
 # Logfmt Encoder
 
 [![GoDoc](https://godoc.org/github.com/allir/zap-logfmt?status.svg)](https://godoc.org/github.com/allir/zap-logfmt)
+[![GitHub Actions CI](https://github.com/allir/zap-logfmt/actions/workflows/ci.yaml/badge.svg)](https://github.com/allir/zap-logfmt/actions/workflows/ci.yaml)
 
 This package provides a logfmt encoder for [zap][zap].
 
